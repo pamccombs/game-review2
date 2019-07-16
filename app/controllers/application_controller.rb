@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     end
 
     def redirect_if_not_logged_in
-        redirect_to new_user_session if !logged_in?
+        redirect_to new_user_session_url if !logged_in?
     end
 
     def which_game?

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
     
   def new
     @user = User.new
@@ -16,7 +17,9 @@ class UsersController < ApplicationController
 
   def show
     redirect_if_not_logged_in
+    #binding.pry
     @user = User.find(params[:id])
+    
   end
 
   def reviews

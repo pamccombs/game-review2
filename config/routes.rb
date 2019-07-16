@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     end
 
     root 'users#show'
+    
  
     resources :games, only: [:index, :show, :new, :create] do
       resources :reviews
