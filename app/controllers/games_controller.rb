@@ -1,7 +1,6 @@
 class GamesController < ApplicationController
   
   def index
-    redirect_if_not_logged_in
     @games = Game.all
   end
 

@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  validates_presence_of :username
-    validates :username, uniqueness: { message: "Sorry, that username is already taken." }
+  #validates_presence_of :username
+    #validates :username, uniqueness: { message: "Sorry, that username is already taken." }
 
   has_many :reviews
   has_many :games, through: :reviews
